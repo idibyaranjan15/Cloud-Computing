@@ -1,17 +1,20 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, ShieldCheck, Zap, Wallet } from 'lucide-react'
-import Navbar from "@/components/navbar"
-import Footer from "@/components/footer"
-import { motion } from "framer-motion"
-import { jakarta } from "@/lib/fonts"
-import { AppStoreProvider } from "@/store/app-store"
+"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, ShieldCheck, Zap, Wallet } from "lucide-react";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
+import { motion } from "framer-motion";
+import { jakarta } from "@/lib/fonts";
+import { AppStoreProvider } from "@/store/app-store";
 
 export default function Page() {
   return (
     <AppStoreProvider>
-      <div className={`${jakarta.className} min-h-dvh flex flex-col bg-gradient-to-b from-emerald-50 via-fuchsia-50 to-amber-50`}>
+      <div
+        className={`${jakarta.className} min-h-dvh flex flex-col bg-gradient-to-b from-emerald-50 via-fuchsia-50 to-amber-50`}
+      >
         <Navbar />
         <main className="flex-1">
           <section className="relative overflow-hidden">
@@ -36,7 +39,9 @@ export default function Page() {
                     Start Mining Crypto with Performance and Style
                   </h1>
                   <p className="text-lg md:text-xl text-gray-700 max-w-prose">
-                    Deploy hash power in seconds. Monitor real-time stats, manage deposits and withdrawals, and enjoy silky-smooth scrolling and animations on a modern, responsive UI.
+                    Deploy hash power in seconds. Monitor real-time stats,
+                    manage deposits and withdrawals, and enjoy silky-smooth
+                    scrolling and animations on a modern, responsive UI.
                   </p>
                   <div className="flex flex-col gap-3 sm:flex-row">
                     <Link href="/login" className="w-full sm:w-auto">
@@ -46,22 +51,31 @@ export default function Page() {
                       </Button>
                     </Link>
                     <Link href="/dashboard" className="w-full sm:w-auto">
-                      <Button variant="outline" className="h-11 px-6 w-full border-emerald-300 text-emerald-700 hover:bg-emerald-50">
+                      <Button
+                        variant="outline"
+                        className="h-11 px-6 w-full border-emerald-300 text-emerald-700 hover:bg-emerald-50"
+                      >
                         Live Dashboard
                       </Button>
                     </Link>
                   </div>
                   <div className="grid grid-cols-3 gap-4 pt-4">
                     <div className="rounded-xl bg-white/70 backdrop-blur ring-1 ring-emerald-100 p-4 text-center">
-                      <div className="text-2xl font-bold text-gray-900">99.9%</div>
+                      <div className="text-2xl font-bold text-gray-900">
+                        99.9%
+                      </div>
                       <div className="text-xs text-gray-600">Uptime</div>
                     </div>
                     <div className="rounded-xl bg-white/70 backdrop-blur ring-1 ring-fuchsia-100 p-4 text-center">
-                      <div className="text-2xl font-bold text-gray-900">Global</div>
+                      <div className="text-2xl font-bold text-gray-900">
+                        Global
+                      </div>
                       <div className="text-xs text-gray-600">Distribution</div>
                     </div>
                     <div className="rounded-xl bg-white/70 backdrop-blur ring-1 ring-amber-100 p-4 text-center">
-                      <div className="text-2xl font-bold text-gray-900">Secure</div>
+                      <div className="text-2xl font-bold text-gray-900">
+                        Secure
+                      </div>
                       <div className="text-xs text-gray-600">by Design</div>
                     </div>
                   </div>
@@ -84,8 +98,12 @@ export default function Page() {
                   <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg ring-1 ring-black/5 p-4 flex items-center gap-3">
                     <ShieldCheck className="h-5 w-5 text-emerald-600" />
                     <div>
-                      <div className="text-sm font-medium text-gray-900">Audited</div>
-                      <div className="text-xs text-gray-600">Industry best practices</div>
+                      <div className="text-sm font-medium text-gray-900">
+                        Audited
+                      </div>
+                      <div className="text-xs text-gray-600">
+                        Industry best practices
+                      </div>
                     </div>
                   </div>
                 </motion.div>
@@ -103,8 +121,13 @@ export default function Page() {
                 className="rounded-2xl bg-white p-6 ring-1 ring-emerald-100"
               >
                 <Zap className="h-6 w-6 text-emerald-600" />
-                <h3 className="mt-4 font-semibold text-gray-900">High Performance</h3>
-                <p className="mt-2 text-sm text-gray-700">Optimized infrastructure and blazing UI interactions for top-tier UX.</p>
+                <h3 className="mt-4 font-semibold text-gray-900">
+                  High Performance
+                </h3>
+                <p className="mt-2 text-sm text-gray-700">
+                  Optimized infrastructure and blazing UI interactions for
+                  top-tier UX.
+                </p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
@@ -114,8 +137,13 @@ export default function Page() {
                 className="rounded-2xl bg-white p-6 ring-1 ring-fuchsia-100"
               >
                 <Wallet className="h-6 w-6 text-fuchsia-600" />
-                <h3 className="mt-4 font-semibold text-gray-900">Simple Wallet</h3>
-                <p className="mt-2 text-sm text-gray-700">Deposit and withdraw with clear, transparent flows and tracking.</p>
+                <h3 className="mt-4 font-semibold text-gray-900">
+                  Simple Wallet
+                </h3>
+                <p className="mt-2 text-sm text-gray-700">
+                  Deposit and withdraw with clear, transparent flows and
+                  tracking.
+                </p>
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
@@ -125,8 +153,13 @@ export default function Page() {
                 className="rounded-2xl bg-white p-6 ring-1 ring-amber-100"
               >
                 <ShieldCheck className="h-6 w-6 text-amber-600" />
-                <h3 className="mt-4 font-semibold text-gray-900">Best Practices</h3>
-                <p className="mt-2 text-sm text-gray-700">Type-safe, modular code ready for production and backend integration.</p>
+                <h3 className="mt-4 font-semibold text-gray-900">
+                  Best Practices
+                </h3>
+                <p className="mt-2 text-sm text-gray-700">
+                  Type-safe, modular code ready for production and backend
+                  integration.
+                </p>
               </motion.div>
             </div>
           </section>
@@ -134,5 +167,5 @@ export default function Page() {
         <Footer />
       </div>
     </AppStoreProvider>
-  )
+  );
 }
